@@ -1,90 +1,145 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kit Web Technologies Test</title>
+    <title>Web Technologies</title>
     <style>
-      /* Set background color */
-      body {
-        background-color: #ffffff;
-        background-image: url(https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2020&q=80);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      
-      /* Style the header */
-      header {
-        background-color: #ffffff;
-        color: #000;
-        padding: 20px;
-        text-align: center;
-      }
-      
-      /* Style the main content */
+    /* Importing font */
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+        /* Style the body */
+         body{
+            margin:0;
+            height:120%;
+            font-family: 'Josefin Sans', sans-serif; 
+            }
+        /* Style the header*/
+        header{
+            position:relative;
+            overflow:hidden;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            height:50vw;
+            min-height:400px;
+            max-height:550px;
+            min-width:300px;
+            color:#eee;
+        }
+        header:after{
+            content:"";
+            width:100%;
+            height:100%;
+            position:absolute;
+            bottom:0;
+            left:0;
+            z-index:-1;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+        }
+        header:before{
+            content:"";
+            width:100%;
+            height:200%;
+            position:absolute;
+            top:0;
+            left:0;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0); backface-visibility: hidden;
+            scale(1.0, 1.0);
+            transform: translateZ(0);
+            background:#1B2030 url(https://images.unsplash.com/photo-1571993142257-eae0b44cf0f1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 50% 0 no-repeat;
+            background-size:100%;
+            background-attachment:fixed;
+            animation: grow 360s  linear 10ms infinite;
+            transition:all 0.4s ease-in-out;
+            z-index:-2
+        }
+        headera{
+            color:#eee
+        }
+        /* Style the menu */
+        menu{
+            display:block;
+            width:40px;
+            height:30px;
+            border:2px solid #fff;
+            border-radius:3px;
+            position:absolute;
+            right:20px;
+            top:20px;
+            text-decoration:none
+        }
+        menu:after{
+            content:"";
+            display:block;
+            width:20px;
+            height:3px;
+            background:#fff;
+            position:absolute;
+            margin:0 auto;
+            top:5px;
+            left:0;
+            right:0;
+            box-shadow:0 8px, 0 16px
+        }
+        @keyframes grow{
+            0% { transform: scale(1) translateY(0px)}
+            50% { transform: scale(1.2) translateY(-400px)}
+            
+        }
+          /* Style the main content */
       main {
         margin: 20px;
-        color: #fff;
-      }
-      
-      /* Style the section titles */
-      h2 {
-        border-bottom: 1px solid #fff;
-        padding-bottom: 10px;
-      }
-      
-        /* Style the section 2 titles */
-      h3 {
-        border-bottom: 1px solid #fff;
-        padding-bottom: 10px;
-      }
-      /* Style the image */
-      img {
-        max-width: 100%;
-      }
-      
-      /* Style the links */
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-      
-      /* Style the footer */
-      footer {
-        background-color: #fff;
         color: #000;
-        padding: 20px;
-        text-align: center;
       }
-      
-    </style>
+        /* Style the links */
+        a{
+            text-decoration:none;
+            color: #000;
+            }
+        /* Style the section titles */
+        h2 {
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+        }
+        /* Style the image */
+        img {
+            max-width: 100%;
+        }
+        /* Style the footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+         </style>
   </head>
   <body>
     <header>
-      <h1><i>Web Technologies Test</i></h1>
-    </header>
+          <div class ="header">
+  <div class="sides"> <a href="#" class="menu"> </a></div>
+              <h1>Web Technologies</div> </header>
     <main>
-      <section>
         <h2>About Us</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed molestie neque, eu sodales augue. Mauris pulvinar erat ac enim efficitur, ac interdum sapien aliquam.</p>
-      </section>
       <section>
         <h2>Our Services</h2>
         <ul>
           <li><a href="#">Web Technologies Seminar</a></li>
           <li><a href="#">Website Development</a></li>
-          <li><a href="#">Web Consultation</a></li>
+          <li><a href="#">Consultation</a></li>
         </ul>
       </section>
       <section>
         <h2>Our Team</h2>
         <ul>
-          <li><img src="https://via.placeholder.com/150" alt="Team member 1"><br>Keith</li>
-          <li><img src="https://via.placeholder.com/150" alt="Team member 2"><br>Member</li>
-          <li><img src="https://via.placeholder.com/150" alt="Team member 3"><br>Member</li>
+          <li><img src="https://images.unsplash.com/photo-1500389723459-ca24a5564899?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Team member 1" width "150" height="150"><br>Keith</li>
         </ul>
       </section>
         <section>
-        <h3>Contact Us</h3>
-        <p>Call us: 12345678</p>
+        <h2>Contact Us</h2>
+        <p>Contact number: 12345678</p>
       </section>
     </main>
     <footer>
